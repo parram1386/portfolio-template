@@ -2,26 +2,47 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/images/logo-vs.ico">
+  <meta name="author" content="parham ramin">
+  <meta name="description" content="A simple template using Tailwind CSS">
+  <link rel="" href="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>My test</title>
+  <title>Template</title>
 </head>
 
-<body class="h-screen justify-center bg-gray-900">
-  <nav class="fixed w-full z-10 top-0  ">
-    <div class="hidden md:flex bg-blue-700 w-full tracking-wider list-none shadow-lg text-white font-semibold transition duration-300 
-    justify-between items-center px-4 border-b-black border-b- hover:bg-blue-800 ">
+<body class="w-full h-100vh ">
+  <nav class="fixed w-full z-10 top-0"></nav>
+  <nav class="fixed w-full z-10 top-0">
+    <div id="mynavbar" class="hidden md:flex bg-blue-700 w-full tracking-wider list-none shadow-lg text-white font-semibold transition duration-300 
+    justify-between items-center px-4 border-b-black  hover:bg-blue-800 space-x-3 ">
 
       <div class="flex space-x-3 ">
+        <li><i class="fa-brands fa-github-alt text-2xl py-5 px-3 "></i></li>
         <li><a href="#" class="hover:bg-blue-900 block py-5 px-3 transition duration-300 ">Home</a></li>
         <li><a href="#" class="hover:bg-blue-900 block py-5 px-3 transition duration-300">About</a></li>
         <li><a href="#" class="hover:bg-blue-900 block py-5 px-3 transition duration-300">Services</a></li>
         <li><a href="#" class="hover:bg-blue-900 block py-5 px-3 transition duration-300">Contact</a></li>
+        <div class="relative flex mt-2 items-center space-x-2 bg-gray-800 rounded-lg px-3 py-1 h-12 w-sm ">
+
+          <button type="submit" class="bg-blue-800 p-2 rounded-full hover:cursor-pointer flex items-center -ml-2 gap-1">
+            <svg class="w-5 h-5 text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>Search</button>
+          <div>
+            <input placeholder="Search for templates..." type="search"
+              class=" bg-gray-800 focus:outline-none hover:placeholder:text-white placeholder:text-sm max-w-md ">
+          </div>
+
+        </div>
       </div>
+
+
+
 
       <div class="flex">
         <a href="#"
@@ -32,62 +53,267 @@
     </div>
 
     <div
-      class="bg-blue-700 fixed  w-full top-0 h-16   tracking-wider list-none flex shadow-lg text-white md:hidden font-semibold hover:bg-blue-800 transition duration-300 ">
-      <li><a href="#" class="hover:bg-blue-950  py-5 px-4  transition duration-300 block"> <i
-            class="fa-solid fa-bars">Menu</i> </a> </li>
+      class=" bg-blue-700 fixed  w-full top-0 h-16   tracking-wider list-none flex shadow-lg text-white md:hidden font-semibold hover:bg-blue-800 transition duration-300 ">
+      <button id="mybtn" class="hover:bg-blue-950  py-5 px-4  transition duration-300 block"><i
+          class="fa-solid fa-bars">Menu</i> </button>
 
+      <ul id="mymenu"
+        class=" md:hidden h-full bg-blue-950 fixed top-0 p-10  w-1/3 text-xl flex flex-col space-y-6 transition-all duration-500 shadow-lg/65 -right-full">
+        <li class="border-b border-gray-900 pb-2"><a href="">Home</a></li>
+        <li class=""><a href="">About</a></li>
+        <li class=""><a href="">Services</a></li>
+        <li class=""><a href="">Contact</a></li>
+        <li class=""><a href="">Login</a></li>
+      </ul>
     </div>
   </nav>
-  <!-- <div class="text-center flex flex-col items-center justify-center gap-4">
-    <h1 class="text-white text-2xl font-bold mb-1.5 ">Hello, world!!</h1>
-    <button
-      class="bg-red-600 rounded-full py-2 px-6 tracking-wide  text-white cursor-pointer shadow-lg hover:shadow-[0_0_10px_rgba(220,38,38,0.5),inset_0_0_15px_rgba(220,38,38,0.5)] hover:bg-red-700 transition duration-300 ">subscribe</button>
-  </div> -->
 
-  <main class="pt-20 p-4">
 
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+  <main>
+    <!-- hero section -->
 
-      <div class="col-span-1 md:col-span-3 relative h-96">
+    <div class="bg-blue-800 shadow-lg text-white pt-15  ">
+      <div class=" ">
 
-        <img src="/src/assets/sample city.jpg" alt="پس زمینه" class="w-full h-full object-cover rounded-lg " />
+        <div class="col-span-1 md:col-span-3 relative h-96">
 
-        <div class="absolute top-0 flex flex-col items-center justify-center p-4">
-          <div class="bg-black/40 p-4 rounded-lg">
-            <h1 class="text-white text-4xl font-extrabold tracking-wide mb-2">
-              This is a sample text
-            </h1>
-            <p class="text-gray-200 text-lg ">
-              "Conten random text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua."
-            </p>
+          <img src="/src/assets/front end.png" alt=" sample image" class=" w-full h-full object-cover opacity-80 " />
 
+          <div class="absolute top-0 flex flex-col items-center justify-center p-4 ">
+
+            <div
+              class=" p-4 rounded-lg shadow-2xl  bg-gray-700/50 bg-opacity-70   md:mt-20 lg:mt-30 text-shadow-2xs text-shadow-black ">
+              <h1 class="text-white text-5xl font-extrabold tracking-wide mb-2">
+                Website Template
+              </h1>
+              <p class="text-gray-200 text-xl ">
+                This is a Open-Source Web Template for SaaS, and More.Built With Tailwind CSS and Javascript. If you
+                liked
+                it , please consider starring it on GitHub.
+              </p>
+              <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4 ">
+                <button
+                  class="bg-white rounded-lg mt-4 p-4 hover:cursor-pointer text-black w-60 md:w-60 animate-pulse "><a
+                    href="#">Download</a></button>
+                <button
+                  class="bg-blue-950 rounded-lg mt-4 p-4 hover:cursor-pointer hover:bg-white hover:transition hover:duration-500 w-60 md:w-60"><a
+                    href="https://github.com/parram1386/portfolio-template.git" target="_blank"
+                    class="flex items-center justify-center hover:transition hover:duration-500 text-gray-400 hover:text-black transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                    <p class="p-1">Star on GitHub</p>
+                  </a></button>
+              </div>
+            </div>
+            <!-- <i
+              class="  p-3 rounded-full fa-solid fa-arrow-down text-3xl animate-bounce absolute flex mt-115 ">
+              </i> -->
           </div>
-          <button
-            class="self-start mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-xl items-start hover:shadow-lg transition duration-300 hover:translate-x-1.5 cursor-pointer">Click</button>
         </div>
-      </div>
 
-      <div class="col-span-1 md:col-span-1 bg-gray-700 p-4 rounded-lg text-white ">
-        <h3 class="text-xl font-bold mb-4 text-white">Sample Text</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi itaque similique quas possimus excepturi
-          ipsum aperiam repellat, neque magni autem enim perferendis deserunt illo reiciendis tempora quos quisquam
-          veritatis! Eum, pariatur earum eligendi quos unde nostrum consequuntur, error quae neque cum recusandae
-          officiis corporis blanditiis, sit voluptates ipsa. Mollitia, quae?</p>
-      </div>
 
+
+
+      </div>
     </div>
 
+    </div>
+    </div>
+    <!-- section -->
+    <section class="bg-gray-900">
+      <div class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold mb-6 text-center text-white">Why is it Efficient</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-gray-800 rounded-lg shadow-lg p-6">
+            <div class="flex items-center gap-2.5">
+              <i class="fa-solid fa-computer mb-3 text-xl text-white"></i>
+              <h3 class="text-xl font-semibold mb-4 text-white">Responsive Design</h3>
+            </div>
+            <p class="text-white">This template is fully responsive and adapts to all screen sizes, ensuring a
+              consistent user experience across devices.</p>
+          </div>
+          <div class="bg-gray-800 rounded-lg shadow-lg p-6">
+            <div class="flex items-center gap-2.5">
+              <i class="fa-solid fa-wrench mb-3 text-xl text-white"></i>
+              <h3 class="text-xl font-semibold mb-4 text-white">Made with Modern Tools</h3>
+            </div>
+            <p class="text-white ">Built with the latest web technologies for optimal performance and maintainability.
+            </p>
+          </div>
+          <div class="bg-gray-800 rounded-lg shadow-lg p-6">
+            <div class="flex items-center gap-2.5">
+              <i class="fa-solid fa-file-code mb-3 text-xl text-white"></i>
+              <h3 class="text-xl font-semibold mb-4 text-white">Easy Customization</h3>
+            </div>
+            <p class="text-white">Easily customize the template to fit your brand and requirements with minimal
+              effort.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <!-- About Section -->
+  <section id="about" class="relative bg-gray-900 text-white py-20 overflow-hidden">
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+
+        <div class="w-full md:w-1/2 order-2 md:order-1 text-left">
+          <h2 class="text-4xl font-bold mb-6 text-white">
+            About <span class="text-blue-500">Me</span>
+          </h2>
+          <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+            I am a Frontend Developer focused on building clean and user-friendly applications. I enjoy turning complex
+            ideas into simple, beautiful digital experiences.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="bg-gray-800 border border-gray-700 px-3 py-1 rounded text-sm text-blue-400">#HTML</span>
+            <span class="bg-gray-800 border border-gray-700 px-3 py-1 rounded text-sm text-blue-400">#Tailwind</span>
+            <span class="bg-gray-800 border border-gray-700 px-3 py-1 rounded text-sm text-blue-400">#JS</span>
+          </div>
+
+          <a href="#contact"
+            class="inline-block bg-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+            Learn More About This project </a>
+        </div>
+
+        <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center md:justify-end">
+          <div class="relative w-64 h-64 md:w-80 md:h-80">
+            <div class="absolute inset-0 bg-blue-600 rounded-2xl rotate-6 opacity-20"></div>
+            <img src="" alt="Profile"
+              class="relative z-10 rounded-2xl object-cover w-full h-full border border-gray-700">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 
+  <!-- contact -->
+  <section class="py-16 px-4 text-center bg-gray-900">
+    <div class="max-w-4xl mx-auto border-2 border-dashed border-gray-200 rounded-3xl p-10">
+      <h2 class="text-3xl font-bold text-gray-100 mb-4">Have a Project in Mind?</h2>
+      <p class="text-gray-100 mb-8 text-lg">
+        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+        visions.
+      </p>
+      <div class="flex flex-col md:flex-row justify-center gap-6">
+        <a href="https://github.com/parram1386/portfolio-template.git"
+          class="inline-block bg-black text-white px-10 py-4 rounded-full font-medium hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg">
+          Let's Talk 👋
+        </a>
+        <a href="#" target="_blank"
+          class="inline-block bg-black text-white px-10 py-4 rounded-full font-medium hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg">
+          Email Me
+        </a>
+        <a href="#" target="_blank"
+          class="inline-block bg-black text-white px-10 py-4 rounded-full font-medium hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg">
+          Whatsapp
+        </a>
+      </div>
+    </div>
+  </section>
 
 
+  <div
+    class="bg-slate-950 bg-linear-to-t from-blue-900 to-slate-950 text-white  justify-center mb-0 p-1.5 text-center  ">
+
+    <footer>
+      <div>
+        <div
+          class="text-lg p-4 grid sm:grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8 justify-center flex-col m-12 space-y-2  ">
+          <div class="col-span-1">
+            <ul>
+              <li class="mb-7 text-2xl"><a href="#">Instruction</a></li>
+
+              <li class="opacity-50 hover:opacity-100 hover:transition hover:duration-500"><a href="#">Using
+                  template</a></li>
+              <li class="opacity-50 hover:opacity-100 hover:transition hover:duration-500"><a href="#">How to
+                  install</a></li>
+
+            </ul>
+          </div>
+          <div class="col-span-1">
+            <ul>
+              <li class="mb-7 text-2xl"><a href="#">Support</a></li>
+              <li class="opacity-50 hover:opacity-100 hover:transition hover:duration-500"><a href="#">Conntact</a></li>
+              <li class="opacity-50 hover:opacity-100 hover:transition hover:duration-500"><a href="#">Help
+                  Center &
+                  FAQ</a></li>
+
+            </ul>
+          </div>
+          <div class=" col-span-1">
+            <ul>
+              <h1 class="mb-7 text-2xl">Social</h1>
+              <li class="opacity-50 hover:opacity-100 hover:transition hover:duration-500"><a href="#">Instagram</a>
+              </li>
+              <li class="opacity-50 hover:opacity-100 hover:transition hover:duration-500"><a href="#">Telegram</a></li>
+
+            </ul>
+          </div>
+          <div class="col-span-1">
+            <ul>
+              <li class="mb-7 text-2xl "><a href="#">Github</a></li>
+              <li class="opacity-50 hover:opacity-100 hover:transition hover:duration-500"><a href="#">More
+                  templates</a></li>
+              <li class="opacity-50 hover:opacity-100 hover:transition hover:duration-500"><a href="#">Plans</a></li>
+
+            </ul>
+          </div>
+
+          <div class="flex space-x-10 justify-center lg:grid-rows-1 lg:col-span-4 md:col-span-2 sm:col-span-1 ">
+            <a href="#"
+              class="text-gray-400 hover:text-pink-600 dark:hover:text-pink-400 transition-colors hover:transition hover:duration-500">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+
+            <a href="#"
+              class="hover:transition hover:duration-500 text-gray-400 hover:text-black dark:hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+            </a>
+
+            <a href="#"
+              class="hover:transition hover:duration-500 text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M11.944 0C5.346 0 0 5.346 0 11.944c0 6.598 5.346 11.944 11.944 11.944 6.598 0 11.944-5.346 11.944-11.944C23.888 5.346 18.542 0 11.944 0zm5.203 7.828l-1.76 8.28c-.131.591-.482.734-.977.457l-2.685-1.98-1.296 1.246c-.143.143-.263.263-.538.263l.193-2.733 4.975-4.493c.216-.193-.047-.3-.332-.111L8.547 13.52l-2.65-.828c-.576-.18-.588-.576.12-.855l10.344-3.992c.48-.18.9.108.735.828z" />
+              </svg>
+            </a>
 
 
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="container mx-auto px-4 mt-6 ">
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+      </div>
+    </footer>
 
-
+  </div>
+  <!-- back to top button -->
+  <div id="btnback" class="fixed bottom-8 right-8 z-50">
+    <button
+      class="hover:cursor-pointer group relative backdrop-blur-md bg-linear-to-r -translate-y-10 from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:shadow-blue-500/50 hover:scale-125 transition-all duration-300 ease-out"
+      title="Back to Top">
+      <svg class="w-6 h-6 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18">
+        </path>
+      </svg>
+    </button>
+  </div>
   <script type="module" src="/src/main.js"></script>
 </body>
 
