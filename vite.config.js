@@ -1,7 +1,9 @@
 import{defineConfig}from"vite";
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig({
- plugins:[tailwindcss()],
- base: '/portfolio-template/',
-});
+export default defineConfig(({ command }) => {
+  return {
+    base: command === 'serve' ? '/' : '/portfolio-template/',
+    plugins: [tailwindcss()],
+  }
+})

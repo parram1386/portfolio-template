@@ -3,14 +3,23 @@ import "./style.css";
 // mobile menu toggle
 const mybtn = document.getElementById("mybtn");
 const mymenu = document.getElementById("mymenu");
+const closeBtn = document.getElementById("closeBtn");
 
-mybtn.addEventListener("click", () => {
-  if (mymenu.style.right === "0px") {
-    mymenu.style.right = "-100%";
-  } else {
-    mymenu.style.right = "0px";
-  }
-});
+const toggleMenu = () => {
+  mymenu.classList.toggle("-right-full");
+  mymenu.classList.toggle("right-0");
+};
+
+mybtn.addEventListener("click", toggleMenu);
+
+if (closeBtn) {
+  closeBtn.addEventListener("click", toggleMenu);
+}
+
+// const menuLinks = mymenu.querySelectorAll("a");
+// menuLinks.forEach((link) => {
+//   link.addEventListener("click", toggleMenu);
+// });
 
 // sticky navbar on scroll && glassy effect
 
@@ -45,16 +54,15 @@ addEventListener("scroll", () => {
   if (window.scrollY > 300) {
     btnback.style.display = "block";
     btnback.style.transition = "all 0.5s ease-in-out";
-    btnback.classList.add("animate-bounce" , "duration-500" , "ease-in-out");
-
+    btnback.classList.add("animate-bounce", "duration-500", "ease-in-out");
   } else {
     btnback.style.display = "none";
   }
-})
+});
 
-btnback.addEventListener('click', () => {
+btnback.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth' 
+    behavior: "smooth",
   });
 });
