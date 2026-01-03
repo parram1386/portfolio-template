@@ -4,11 +4,16 @@ import "./style.css";
 const mybtn = document.getElementById("mybtn");
 const mymenu = document.getElementById("mymenu");
 const closeBtn = document.getElementById("closeBtn");
+const overlay = document.getElementById("overlay");
+
 
 const toggleMenu = () => {
   mymenu.classList.toggle("-right-full");
   mymenu.classList.toggle("right-0");
+  overlay.classList.toggle("hidden");
 };
+
+overlay.addEventListener("click", toggleMenu);
 
 mybtn.addEventListener("click", toggleMenu);
 
@@ -16,10 +21,14 @@ if (closeBtn) {
   closeBtn.addEventListener("click", toggleMenu);
 }
 
+
+
 // const menuLinks = mymenu.querySelectorAll("a");
 // menuLinks.forEach((link) => {
 //   link.addEventListener("click", toggleMenu);
 // });
+
+
 
 // sticky navbar on scroll && glassy effect
 
