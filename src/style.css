@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@plugin "daisyui";
 @layer base {
  
   input[type="search"]::-webkit-search-decoration,
@@ -12,8 +13,22 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    
   }
 }
+
+@layer base {
+  *:focus {
+    outline: none !important;
+  }
+  
+  button, div[role="button"] {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
+}
+
 
 @layer utilities{
     .box-shadow-custom{

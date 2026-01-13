@@ -9,6 +9,8 @@
   <meta name="author" content="parham ramin">
   <meta name="description" content="A simple template using Tailwind CSS">
   <link rel="stylesheet" href="./src/style.css">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231e40af'/><text y='50%' x='50%' fill='white' font-family='sans-serif' font-size='60' text-anchor='middle' dominant-baseline='central'>P</text></svg>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Template</title>
@@ -17,12 +19,30 @@
 </head>
 
 <body class="w-full h-100vh ">
+
+  <!-- Nav -->
+
   <nav class="fixed w-full z-60 top-0">
     <div id="mynavbar" class="hidden md:flex bg-blue-700 w-full tracking-wider list-none shadow-lg text-white font-semibold transition duration-300 
     justify-between items-center px-4 border-b-black  hover:bg-blue-800 space-x-3 ">
 
       <div class="flex space-x-3 ">
-        <li><i class="fa-brands fa-github-alt text-2xl py-5 px-3 "></i></li>
+        <div class="flex items-center gap-3 group">
+          <div class="relative">
+            <div
+              class="absolute -inset-1 bg-blue-500 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-300">
+            </div>
+
+            <div
+              class="relative w-10 h-10 bg-blue-800 rounded-xl flex items-center justify-center border border-white/20 shadow-lg">
+              <svg viewBox="0 0 100 100" class="w-7 h-7 fill-white">
+                <path d="M30 35 L15 50 L30 65 M70 35 L85 50 L70 65 M45 75 L55 25" stroke="white" stroke-width="8"
+                  stroke-linecap="round" fill="none" />
+              </svg>
+            </div>
+          </div>
+          <span class="text-xl font-black text-white tracking-tighter">PARRAM<span class="text-blue-400"></span></span>
+        </div>
         <li><a href="#" class="hover:bg-blue-900 block py-5 px-3 transition duration-300 ">Home</a></li>
         <li><a href="#" class="hover:bg-blue-900 block py-5 px-3 transition duration-300">About</a></li>
         <li><a href="#" class="hover:bg-blue-900 block py-5 px-3 transition duration-300">Services</a></li>
@@ -45,10 +65,24 @@
 
 
 
-      <div class="flex">
-        <a href="#"
-          class="tracking-widest  rounded-lg  px-8 py-1 items-center transition duration-300     ">Dashboard</a>
 
+      <div class="dropdown dropdown-end">
+        <div tabindex="0" role="button"
+          class="btn bg-blue-800/80 hover:bg-blue-700/90 active:bg-blue-600 text-white border-none backdrop-blur-md shadow-lg transition-all duration-200 flex items-center gap-2">
+          Menu
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-70" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+
+        <ul tabindex="0"
+          class="dropdown-content menu p-2 mt-2 shadow-2xl bg-blue-900/70 backdrop-blur-xl rounded-box w-52 border border-white/10 text-white z-999">
+          <li><a class="hover:bg-white/20 active:bg-white/30 ">🏠 Dashboard</a></li>
+          <li><a class="hover:bg-white/20 active:bg-white/30">⚙️ Settings</a></li>
+          <hr class="border-white/10 my-1" />
+          <li><a class="hover:bg-red-500/40 text-red-200 active:bg-red-500/60">❌ Logout</a></li>
+        </ul>
       </div>
 
     </div>
@@ -219,6 +253,102 @@
   </section>
 
 
+  <!-- slide-image -->
+  <section class="py-16 bg-gray-900">
+    <div class="max-w-6xl m-auto px-6 sm:py-6 ">
+      <div
+        class=" w-full rounded-3xl shadow-2xl border border-white/5 bg-gray-800/20 backdrop-blur-md overflow-hidden relative">
+        <div class="relative h-150 justify-center flex group carousel-item ">
+
+          <img
+            class=" transition-opacity opacity-100 transition-transform duration-700 group-hover:scale-105 w-full absolute object-cover h-150   "
+            id="#slide1" src="./image-slide (1).jpg" alt="image1">
+          <img
+            class="transition-opacity opacity-0 transition-transform duration-700 group-hover:scale-105 w-full absolute object-cover h-150 "
+            id="#slide2" src=".//image-slide (2).jpg" alt="image2">
+          <img
+            class="transition-opacity opacity-0 transition-transform duration-700 group-hover:scale-105 w-full absolute object-cover h-150  "
+            id="#slide3" src="./image-slide (3).jpg" alt="image3">
+          <div class="absolute inset-0 z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700 
+            bg-[radial-gradient(circle,_transparent_50%,_rgba(17,24,39,0.8)_100%)]">
+          </div>
+          <div class="absolute inset-0 flex items-center justify-between px-4 z-30">
+            <button id="prevBtn"
+              class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all backdrop-blur-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+
+            <button id="nextBtn"
+              class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all backdrop-blur-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          </div>
+          <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+            <div class="dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300"></div>
+            <div class="dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300"></div>
+            <div class="dot w-2 h-2 rounded-full bg-white/40 transition-all duration-300"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="py-20 bg-gray-900">
+    <div class="max-w-3xl m-auto px-6">
+      <h2 class="text-3xl font-bold text-white mb-10 text-center">Frequently Asked Questions</h2>
+
+      <div class="space-y-4">
+        <div class="faq-item bg-gray-800/40 border border-white/5 rounded-2xl overflow-hidden backdrop-blur-md">
+          <button
+            class="faq-question w-full flex justify-between items-center p-5 text-left text-white hover:bg-white/5 transition-colors">
+            <span class="font-medium">What technologies do you use in projects?</span>
+            <svg xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 text-gray-400 transition-transform duration-300 arrow" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 bg-gray-900/50">
+            <p class="p-5 text-gray-400 leading-relaxed">
+              I primarily use modern technologies like Tailwind CSS, JavaScript (ES6+), and other Tailwind plugins to
+              build high-performance, responsive websites.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item bg-gray-800/40 border border-white/5 rounded-2xl overflow-hidden backdrop-blur-md">
+          <button
+            class="faq-question w-full flex justify-between items-center p-5 text-left text-white hover:bg-white/5 transition-colors">
+            <span class="font-medium">Is the design mobile-friendly?</span>
+            <svg xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 text-gray-400 transition-transform duration-300 arrow" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 bg-gray-900/50">
+            <p class="p-5 text-gray-400 leading-relaxed">
+              Absolutely! Every project is built with a "Mobile-First" approach, ensuring a seamless experience across
+              all devices and screen sizes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
   <!-- contact -->
   <section class="py-16 px-4 text-center bg-gray-900">
     <div class="max-w-4xl mx-auto border-2 border-dashed border-gray-200 rounded-3xl p-10">
@@ -243,6 +373,8 @@
       </div>
     </div>
   </section>
+
+
 
 
   <div
