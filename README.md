@@ -24,4 +24,4 @@ This project is currently under active development. Below is the roadmap for pla
 - [x] **Modern Footer:** Design a footer including social media links and copyright info.
 - [ ] **SEO & Performance:** Optimize image sizes and accessibility to reach a 90+ Lighthouse score.
 
-<img width="787" height="542" alt="image" src="https://github.com/user-attachments/assets/04d139b2-daf2-4165-b0e1-d6299052fd2e" />
+<img width="1279" height="639" alt="image" src="https://github.com/user-attachments/assets/979b8a06-3aa8-4103-a3c8-6fa52301c86c" />
