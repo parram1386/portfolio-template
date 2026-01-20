@@ -15,8 +15,8 @@
   <title>Template</title>
 
   <link rel="stylesheet" crossorigin href="/portfolio-template/assets/index-BoG6xTNP.css">
-  <script type="module" crossorigin src="/portfolio-template/assets/index-CAgtjLM5.js"></script>
-  <link rel="stylesheet" crossorigin href="/portfolio-template/assets/index-B9qltpLm.css">
+  <script type="module" crossorigin src="/portfolio-template/assets/index-B1dK5lrG.js"></script>
+  <link rel="stylesheet" crossorigin href="/portfolio-template/assets/index-Bf6ZkDkl.css">
 </head>
 
 <body class="w-full h-100vh ">
@@ -27,7 +27,7 @@
     <div id="mynavbar" class="hidden md:flex bg-blue-700 w-full tracking-wider list-none shadow-lg text-white font-semibold transition duration-300 
     justify-between items-center px-4 border-b-black  hover:bg-blue-800 space-x-3 ">
 
-      <div class="flex space-x-3 ">
+      <div class="flex space-x-3 container">
         <div class="flex items-center gap-3 group">
           <div class="relative">
             <div
@@ -44,11 +44,12 @@
           </div>
           <span class="text-xl font-black text-white tracking-tighter">PARRAM<span class="text-blue-400"></span></span>
         </div>
-        <li><a href="#" class="hover:bg-blue-900 block py-5 px-3 transition duration-300 ">Home</a></li>
+
+        <li><a id="li" href="#" class="hover:bg-blue-900 block py-5 px-3 transition duration-300 ">Home</a></li>
         <li><a href="#" class="hover:bg-blue-900 block py-5 px-3 transition duration-300">About</a></li>
         <li><a href="#" class="hover:bg-blue-900 block py-5 px-3 transition duration-300">Services</a></li>
         <li><a href="#" class="hover:bg-blue-900 block py-5 px-3 transition duration-300">Contact</a></li>
-        <div class="relative flex mt-2 items-center space-x-2 bg-gray-800 rounded-lg px-3 py-1 h-12 w-sm ">
+        <div class="hidden relative lg:flex mt-2 items-center space-x-2 bg-gray-800 rounded-lg px-3 py-1 h-12 w-sm ">
 
           <button type="submit" class="bg-blue-800 p-2 rounded-full hover:cursor-pointer flex items-center -ml-2 gap-1">
             <svg class="w-5 h-5 text-gray-400 " fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,7 +70,7 @@
 
       <div class="dropdown dropdown-end">
         <div tabindex="0" role="button"
-          class="btn bg-blue-800/80 hover:bg-blue-700/90 active:bg-blue-600 text-white border-none backdrop-blur-md shadow-lg transition-all duration-200 flex items-center gap-2">
+          class="btn bg-indigo-900/50 rounded-4xl text-white border-none backdrop-blur-md shadow-xlg  transition-all duration-200 flex items-center gap-2">
           Menu
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-70" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
@@ -363,16 +364,53 @@
           class="inline-block bg-black text-white px-10 py-4 rounded-full font-medium hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg">
           Let's Talk 👋
         </a>
-        <a href="#" target="_blank"
-          class="inline-block bg-black text-white px-10 py-4 rounded-full font-medium hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg">
-          Email Me
-        </a>
+        
         <a href="#" target="_blank"
           class="inline-block bg-black text-white px-10 py-4 rounded-full font-medium hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg">
           Whatsapp
         </a>
       </div>
+
+      <!-- Email send -->
+     <div class="bg-gray-800/40 backdrop-blur-md p-10 mt-10 rounded-3xl border border-white/10 shadow-2xl max-w-2xl mx-auto overflow-hidden relative">
+    
+    <div id="form-content" class="transition-all duration-500 transform">
+        <div class="space-y-8">
+            <h2 class="text-4xl font-bold text-white tracking-tight">Get in touch</h2>
+            <form id="my-form" action="https://formspree.io/f/xlggjwzl" method="POST" class="flex flex-col gap-6">
+                <div class="space-y-2">
+                    <label class="block text-xl font-medium text-gray-300 ml-2">Email Address</label>
+                    <input type="email" name="email" id="email" required placeholder="name@example.com"
+                        class="w-full p-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder:text-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all">
+                </div>
+                <div class="space-y-2">
+                    <label class="block text-xl font-medium text-gray-300 ml-2">Message</label>
+                    <textarea name="message" id="message" placeholder="How can I help you?" required
+                        class="w-full p-5 bg-white/5 border border-white/10 rounded-2xl text-white placeholder:text-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none h-40 transition-all"></textarea>
+                </div>
+                <button id="submit-btn" type="submit"
+                    class="hover:cursor-pointer group relative bg-white text-black rounded-full py-4 px-10 font-bold self-start overflow-hidden transition-all duration-300 hover:pr-14 active:scale-95 shadow-lg shadow-white/10">
+                    <span id="btn-text" class="relative z-10">Send Message</span>
+                    <span id="btn-icon" class="absolute right-5 top-1/2 -translate-y-1/2 opacity-0 -translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </span>
+                </button>
+            </form>
+        </div>
     </div>
+
+    <div id="thanks-content" class="hidden flex-col items-center justify-center py-10 text-center animate-in fade-in zoom-in duration-500">
+        <div class="w-20 h-20 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-4xl mb-6 shadow-inner">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <h2 class="text-3xl font-bold text-white mb-2">Message Sent!</h2>
+        <p class="text-gray-400">Thanks for reaching out. I'll get back to you soon.</p>
+        <button onclick="toggleView(false)" class="mt-8 text-blue-400 hover:text-blue-300 transition-colors font-medium">
+            Send another message
+        </button>
+    </div>
+
+</div>
   </section>
 
 
@@ -387,7 +425,7 @@
           class="text-lg p-4 grid sm:grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8 justify-center flex-col m-12 space-y-2  ">
           <div class="col-span-1">
             <ul>
-              <li class="mb-7 text-2xl"><a href="#">Instruction</a></li>
+              <li class="mb-7 text-2xl"><a href="#">Template</a></li>
 
               <li class="opacity-50 hover:opacity-100 hover:transition hover:duration-500"><a href="#">Using
                   template</a></li>
@@ -465,7 +503,7 @@
 
   </div>
   <!-- back to top button -->
-  <div id="btnback" class="fixed bottom-8 right-8 z-50 ">
+  <div id="btnback" class="fixed bottom-8 right-8 z-50 hidden">
     <button
       class="hover:cursor-pointer group relative backdrop-blur-md bg-linear-to-r -translate-y-10 from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:shadow-blue-500/50 hover:scale-125 transition-all duration-300 ease-out"
       title="Back to Top">
