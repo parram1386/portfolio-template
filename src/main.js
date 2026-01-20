@@ -33,14 +33,17 @@ window.addEventListener("scroll", function () {
       "transition",
       "duration-500",
       "ease-in-out"
+      
     );
+    
     mynav.classList.add("py-2");
   } else {
     mynav.classList.remove(
       "bg-blue-700/50",
       "backdrop-blur-md",
       "shadow-lg",
-      "py-2"
+      "py-2",
+      
     );
   }
 });
@@ -141,4 +144,59 @@ questions.forEach((question) => {
       answer.style.maxHeight = answer.scrollHeight + "px";
     }
   });
+});
+
+////Email Form
+
+const form = document.getElementById("my-form");
+const formContent = document.getElementById("form-content");
+const thanksContent = document.getElementById("thanks-content");
+const btn = document.getElementById("submit-btn");
+const btnText = document.getElementById("btn-text");
+
+
+function toggleView(showThanks) {
+    if (showThanks) {
+        formContent.classList.add("opacity-0", "scale-95", "-translate-y-10");
+        setTimeout(() => {
+            formContent.classList.add("hidden");
+            thanksContent.classList.remove("hidden");
+            thanksContent.classList.add("flex");
+        }, 500);
+    } else {
+        thanksContent.classList.add("hidden");
+        thanksContent.classList.remove("flex");
+        formContent.classList.remove("hidden", "opacity-0", "scale-95", "-translate-y-10");
+        form.reset();
+    }
+}
+
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+    
+    btn.disabled = true;
+    btnText.innerText = "Sending...";
+    
+    const data = new FormData(e.target);
+
+    try {
+        const response = await fetch(e.target.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+           
+            toggleView(true);
+        } else {
+            alert("Oops! There was a problem. Please try again.");
+        }
+    } catch (error) {
+        alert("Network error. Please check your connection.");
+    } finally {
+        btn.disabled = false;
+        btnText.innerText = "Send Message";
+    }
 });
