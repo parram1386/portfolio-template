@@ -14,14 +14,14 @@ This project is currently under active development. Below is the roadmap for pla
 - [x] Basic typography and color palette
 
 ### Phase 2: User Experience & Refinement (In Progress 🛠️)
-- [ ] **Mobile Responsiveness:** Ensure the layout adapts perfectly to small screens using Tailwind's `sm:` and `md:` breakpoints.
+- [x] **Mobile Responsiveness:** Ensure the layout adapts perfectly to small screens using Tailwind's `sm:` and `md:` breakpoints.
 - [ ] **Dark Mode Support:** Implement a theme switcher for an optimized night-reading experience.
-- [ ] **Spacing & Padding Fixes:** Refine internal spacing (padding) in the sidebar for better readability.
+- [x] **Spacing & Padding Fixes:** Refine internal spacing (padding) in the sidebar for better readability.
 
 ### Phase 3: Advanced Features (Upcoming 🚀)
-- [ ] **Features Grid:** Add a 3-column section to showcase services or tools.
-- [ ] **Dynamic Contact Form:** Build a functional contact section with validation styles.
-- [ ] **Modern Footer:** Design a footer including social media links and copyright info.
+- [x] **Features Grid:** Add a 3-column section to showcase services or tools.
+- [x] **Dynamic Contact Form:** Build a functional contact section with validation styles.
+- [x] **Modern Footer:** Design a footer including social media links and copyright info.
 - [ ] **SEO & Performance:** Optimize image sizes and accessibility to reach a 90+ Lighthouse score.
 
-<img width="787" height="542" alt="image" src="https://github.com/user-attachments/assets/04d139b2-daf2-4165-b0e1-d6299052fd2e" />
+<img width="1279" height="639" alt="image" src="https://github.com/user-attachments/assets/979b8a06-3aa8-4103-a3c8-6fa52301c86c" />
